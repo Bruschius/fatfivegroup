@@ -1,6 +1,18 @@
 /*GOOGLE COPYRIGHT THANKS A LOT*/
+	*
+	{
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+
+
 html { 
-  background: url(geddy.png) no-repeat; 
+  /*background: url(geddy.png) no-repeat; */
+  background-color:#f6f6f6;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,10 +21,14 @@ html {
 
 
 body {	
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		margin: 0;
+		font-size: 11.5pt;
+		line-height: 20px;   
+   /* font-size: 12px;
     line-height: 20px;
-    color: #505050;
+    color: #;*/
 }
 
 .button {
@@ -24,9 +40,26 @@ body {
     background-color: white;
     border: 2px solid black;
     text-decoration: none;
+    text-align: center;
     color: black;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+
+.button2 {
+    margin: .4em;
+    /*padding: 10em;*/
+    cursor: pointer;
+    width: 160px;
+    height: 99px;
+    background-color: white;
+    border: 2px solid black;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 
 
 .Ditta
@@ -35,29 +68,90 @@ body {
     margin-top: 60px;
     margin-left:auto;
     margin-right:auto;
-    width:60%;
+   
+    width: 806px; /*the image width*/
+    height: 122px; /*the image height*/
+  
+  
+	
+	position:relative;
+    /*margin-left: -50px; half the image width*/
+	
+ 
 }
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	#banner-wrapper
+	{
+		position: relative;
+		background: url('../images/banner.jpg') center center no-repeat;
+		background-size: cover;
+		z-index: 1;
+	}
+
+		/*
+			Note: The following style adds the textured/pixelated look to the banner
+			image. I added this to help mask the distortion introduced when a browser
+			resizes an image, but if you don't want this to happen just remove or comment
+			out the entire style.
+		*/
+
+		#banner-wrapper:before
+		{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url('http://i.imgur.com/bdC9c6K.png');
+			opacity: 0.175;
+		}
+	
+	#main-wrapper
+	{
+		background: #fff;
+		border-top: solid 5px #e3daa8;
+		border-bottom: solid 5px #c1cac5;
+	}
+	
+
+
 #QSopra
 {
-    margin-top: 75px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1020px;
+
+    margin-left:auto ;
+    margin-right:auto;
+	
+    width: 995px;
 }
+
+#QMain
+
+{
+
+    margin-left:auto ;
+    margin-right:auto;
+	
+    width: 1260px;
+}
+
 
 .facebook
 {
     position:fixed ;
-    left: 1150px;
-    position:fixed;
-    top: 30px;
+    left: 1500px;
+   
+
 }
 .twitter
 {
-    position:fixed ;
-    left: 1190px;
     position:fixed;
-    top: 30px;
+    left: 1540px;
+
 }
 
 #QSotto
@@ -66,23 +160,77 @@ body {
     margin-right: auto;
 }
 
+.main { 
+height:100%;
+background-color:#f6f6f6; 
+margin-left: auto;
+margin-right: auto;
+border-top:1px solid #000;
+
+
+ }
+
+.top 
+{
+
+	border-bot:1px solid #000;
+	height: 280px;
+	border-bottom:1px solid #000;
+}
+
+.colsx{
+	float:left;
+	width:12%;
+	border-right:1px solid #000;
+	background-color:#f69241;
+	height:100%;
+}
+
+.textsidesx
+{
+    padding-left:2px;
+    text-align:left;
+    font-size:14px;
+}
+
+.coldx{
+	float:right;
+	width:12%;
+	border-left:1px solid #000;
+	background-color:#f69241;
+	height:100%;
+}
+
+.bottom
+{
+	width:100%;
+	height: 200px;
+	background-color:#1D1F21;
+
+	border-top:1px solid #000;
+	
+}
+	
+	
 #titolo{
-    margin-top: 170px;
-    margin-left: 590px;
-    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
     width: 150px;
-    height: 50px;
+   
     font-size: 35px;
     font-family:calibri;
+
     
 }
 
 #testo
 {
-    position: absolute;
-    margin-left: 270px;
+  
+    margin-left: auto;
+    margin-right: auto;
     width: 800px;
-    height: 100px;
     text-align: center;
 
 }
@@ -95,21 +243,23 @@ body {
 
 }
 
-
-.maps
-{
-    
-    /* posizionamento in fondo alla pagina */
-    
-    bottom: 0px;
-    position: relative;
-    margin-left:425px;
-    
-    
+#map:hover{
+    height: 200px;
 }
 
-
-
+#map
+{
+    border: 0;
+    height:10px;
+    width: 100%;
+    /* posizionamento in fondo alla pagina */
+    position: fixed;
+    bottom: 0px;
+    position:fixed;
+    margin-right:0px;
+    margin-left:0px;
+    left: 0px;
+}
 
 /* 2D TRANSITIONS */
 /* Grow */

@@ -1,2 +1,12 @@
-DISCLAMER:
-Sito in pre-Alpha
+IMGUR Image Cloud:
+Facebook --> http://i.imgur.com/DOVpysr.png
+Twitter --> http://i.imgur.com/VVCSr2U.png
+TecnoLogo --> http://i.imgur.com/8DfRi5X.png
+Texture-RetroLogo --> http://i.imgur.com/bdC9c6K.png
+Logo --> http://i.imgur.com/jJW71BK.jpg
+
+[19-05-14]
+
+[5-05-14]
+- La cartella "Working" contiene tutte le pagine in lavorazione.
+[/]
